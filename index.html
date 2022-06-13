@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="calculadora">
+        <p class="textonegro">Para calcular su índice de masa corporal, ingrese su estatura y peso</p>
+        <p class="textogris">Sistema métrico</p>
+        <p class="textonegro">ESTATURA</p>
+        <p class="textogris">en centímetros:</p>
+        <input id="altura" type="number">
+        <p class="textonegro">PESO</p>
+        <p class="textogris">en kilogramos</p>
+        <input id="peso" type="number">
+        <button class="btn btn-primary" onclick="calcularIMC()">Calcular</button>
+        <p class="textogris">Resultado: <input id="resultado"></p>
+    </div>
+    <table id="tablareferencia" class="table" hidden>
+        <thead>
+            <tr>
+                <td>Composición corporal</td>
+                <td>Índice de masa corporal (IMC)</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="filainferior" hidden>
+                <td>Peso inferior al normal</td>
+                <td>Menos de 18.5</td>
+            </tr>
+            <tr id="filanormal" hidden>
+                <td>Normal</td>
+                <td>18.5 – 24.9</td>
+            </tr>
+            <tr id="filasuperior" hidden>
+                <td>Peso superior al normal</td>
+                <td>25.0 – 29.9</td>
+            </tr>
+            <tr id="filaobesidad" hidden>
+                <td>Obesidad</td>
+                <td>Más de 30.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

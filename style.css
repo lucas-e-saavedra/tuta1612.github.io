@@ -1,0 +1,19 @@
+#calculadora{
+    background-color: gainsboro;
+    width: 40%;
+    margin: 50px auto;
+    padding: 1rem;
+}
+
+#tablareferencia{
+    width: 40%;
+    margin: 50px auto;
+}
+
+.textogris{
+    color: gray;
+}
+.textonegro{
+    color: black;
+    font-weight: bold;
+}
